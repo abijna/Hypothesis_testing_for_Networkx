@@ -61,3 +61,29 @@ The suite currently contains 10 tests:
 
 - 9 tests are expected to pass
 - 1 test is marked `xfail` because it reproduces a bug in NetworkX 3.6.1 group betweenness centrality
+
+## Current Run Output
+
+```bash
+pytest -v networkx_properties_tests.py
+```
+
+```text
+test session starts
+platform darwin -- Python 3.13.5, pytest-9.0.3, pluggy-1.5.0
+plugins: hypothesis-6.152.1
+collected 10 items
+
+networkx_properties_tests.py::test_dijkstra_path_is_valid_walk_with_matching_length PASSED
+networkx_properties_tests.py::test_dijkstra_positive_weight_scaling PASSED
+networkx_properties_tests.py::test_dijkstra_equals_bellman_ford_on_nonneg_weights PASSED
+networkx_properties_tests.py::test_mst_weight_le_any_spanning_tree PASSED
+networkx_properties_tests.py::test_mst_idempotent PASSED
+networkx_properties_tests.py::test_dijkstra_predecessor_tree PASSED
+networkx_properties_tests.py::test_bidirectional_dijkstra_matches_dijkstra PASSED
+networkx_properties_tests.py::test_johnson_matches_all_pairs_dijkstra PASSED
+networkx_properties_tests.py::test_dijkstra_transposition_isomorphism PASSED
+networkx_properties_tests.py::test_group_betweenness_centrality_non_negative XFAIL
+
+9 passed, 1 xfailed in 1.23s
+```
