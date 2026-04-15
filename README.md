@@ -62,7 +62,7 @@ The suite currently contains 10 tests:
 - 9 tests are expected to pass
 - 1 test is marked `xfail` because it reproduces a bug in NetworkX 3.6.1 group betweenness centrality
 
-## Current Run Output
+## Run Output
 
 ```bash
 pytest -v networkx_properties_tests.py
